@@ -1,0 +1,333 @@
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <h3>Super User</h3>
+      <ul class="nav side-menu">
+        <li><a href="/dashboard"><i class="fa fa-home"></i> Beranda </a>
+        </li>
+        <li><a><i class="fa fa-money"></i> Pajak Tahunan <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a>Pajak Tahunan Lengkap<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="/pt_lengkap?pajak=Pajak%20Tahunan&opt=lengkap&provinsi=Jawa%20Barat&jk=Motor">Motor</a>
+                        </li>
+                        <li><a href="/pt_lengkap?pajak=Pajak%20Tahunan&opt=lengkap&provinsi=Jawa%20Barat&jk=Mobil">Mobil</a>
+                        </li>
+                      </ul>
+                </li>
+                <li><a>Acc KTP Pajak Tahunan <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="/pt_accktp?pajak=Pajak%20Tahunan&opt=acc%20ktp&provinsi=Jawa%20Barat&jk=Motor">Motor</a>
+                        </li>
+                        <li><a href="/pt_accktp?pajak=Pajak%20Tahunan&opt=acc%20ktp&provinsi=Jawa%20Barat&jk=Mobil">Mobil</a>
+                        </li>
+                      </ul>
+                </li>
+            </ul>
+          </li> 
+        <!-- <li><a><i class="fa fa-calendar"></i> STNK 5 Tahunan <span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
+            <li><a> STNK 5 Tahunan Lengkap<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li id="stnk5motorbdg"><a href="/stnk5">Bandung & Cimahi</a></li>
+                            <li><a href="/stnk_kota_lain_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/pt_acc_jabar_mobil">Jawa Barat</a></li>
+                            <li><a href="/pt_acc_kota_lain_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a>Acc KTP STNK 5 Tahunan <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                            <li><a href="/stnk_acc_non_bdg_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                            <li><a href="/stnk_acc_bdg_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+        </li> -->
+        <li><a><i class="fa fa-calendar"></i> STNK 5 Tahunan <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a> STNK 5 Tahunan Lengkap<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">Motor</a>
+                      </li>
+                      <li><a href="#">Mobil</a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a>Acc KTP STNK 5 Tahunan <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">Motor</a>
+                      </li>
+                      <li><a href="#">Mobil</a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+        <!-- <li><a><i class="fa fa-copy"></i> Duplikat STNK Hilang <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a> Duplikat STNK Hilang Lengkap<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                              <li><a href="/stnk_bdg_motor">Bandung & Cimahi</a></li>
+                              <li><a href="/stnk_kota_lain_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                          </ul>
+                      </li>
+                      <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                              <li><a href="/pt_acc_jabar_mobil">Jawa Barat</a></li>
+                              <li><a href="/pt_acc_kota_lain_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li><a> Duplikat STNK Hilang Acc KTP<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                              <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                              <li><a href="/stnk_acc_non_bdg_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                          </ul>
+                      </li>
+                      <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                              <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                              <li><a href="/stnk_acc_bdg_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+          </li> -->
+          <li><a><i class="fa fa-copy"></i> Duplikat STNK Hilang <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a> Duplikat STNK Hilang Lengkap<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">Motor</a>
+                      </li>
+                      <li><a href="#">Mobil<span class="fa fa-chevron-down"></span></a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a> Duplikat STNK Hilang Acc KTP<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">Motor</a>
+                      </li>
+                      <li><a href="#">Mobil</a>
+                      </li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+        <!-- <li><a><i class="fa fa-arrow-left"></i> Cabut Berkas <span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
+            <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                    <li><a href="/stnk_acc_non_bdg_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                </ul>
+            </li>
+            <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                    <li><a href="/stnk_acc_bdg_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                </ul>
+            </li>
+          </ul>
+        </li> -->
+        <li><a><i class="fa fa-arrow-left"></i> Cabut Berkas <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor</a>
+              </li>
+              <li><a href="#">Mobil</a>
+              </li>
+            </ul>
+          </li>
+        <!-- <li><a><i class="fa fa-sign-in"></i> Mutasi Masuk <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                      <li><a href="/stnk_acc_non_bdg_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                  </ul>
+              </li>
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                      <li><a href="/stnk_acc_bdg_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-sign-in"></i> Mutasi Masuk <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor</a>
+              </li>
+              <li><a href="#">Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <!-- <li><a><i class="fa fa-refresh"></i> Mutasi Lokal Antar Samsat <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Motor<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                      <li><a href="/stnk_acc_non_bdg_motor">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                  </ul>
+              </li>
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                      <li><a href="/stnk_acc_bdg_mobil">NON Bandung & Cimahi (Pilih Kota)</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-refresh"></i> Mutasi Lokal Antar Samsat <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor</a>
+              </li>
+              <li><a href="#">Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <!-- <li><a><i class="fa fa-arrow-left"></i> Perpanjangan KIR <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-arrow-up"></i> Perpanjangan KIR <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <!-- <li><a><i class="fa fa-arrow-left"></i> Cabut Berkas KIR <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-arrow-left"></i> Cabut Berkas KIR <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <!-- <li><a><i class="fa fa-car"></i> Surat Jalan POLDA <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Motor & Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">POLDA Jabar</a></li>
+                      
+                  </ul>
+              </li>
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">POLDA Jabar</a></li>
+                     
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-car"></i> Surat Jalan POLDA <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Motor & Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">POLDA Jabar</a></li>
+                      
+                  </ul>
+              </li>
+              <li><a>Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="#">POLDA Jabar</a></li>
+                     
+                  </ul>
+              </li>
+            </ul>
+        </li>
+        <!-- <li><a><i class="fa fa-folder-open-o"></i> Permintaan Surat Keterangan Buka Blokir ke LEASING <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a>Motor & Mobil<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                      <li><a href="/stnk_acc_bdg_motor">Bandung & Cimahi</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li> -->
+        <li><a><i class="fa fa-folder-open-o"></i> Permintaan Surat Keterangan Buka Blokir ke LEASING <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor & Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-unlock-alt"></i> Permintaan Buka Blokir ke POLDA / Polres <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor & Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-book"></i> Permintaan ABSAH BUKU BPKB <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor & Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-file"></i> Permintaan ABSAH & BLOKIR BUKU BPKB <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-check-square-o"></i> Legalisir Lembar Faktur <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor dan Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-edit"></i> Penulisan Keterangan di Buku BPKB <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor dan Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-lock"></i> Permintaan BLOKIR JUAL di samsat <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">Motor dan Mobil</a>
+              </li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-database"></i> Data Master<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+              <li><a href="#">User</a></li>
+              <li><a href="#">Klien</a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>

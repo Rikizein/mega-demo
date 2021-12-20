@@ -1,0 +1,77 @@
+<% include ../partials/head %>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <!-- menu profile quick info -->
+            <% include ../partials/head-sidebar %>
+              <!-- /menu profile quick info -->
+              <!-- sidebar menu -->
+              <% include ../partials/sidebar %>
+                <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <% include ../partials/navigation %>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <div class="">
+              <div class="page-title">
+                <!-- <div class="title_left">
+                  <h3><%= qs.pajak %> <%= qs.kendaraan %> <%= qs.provinsi %></h3>
+                </div> -->
+              </div>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                    <h2>PERMINTAAN SURAT KETERANGAN BUKA BLOKIR KE LEASING</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                    <div class="x_content">
+                      <br />
+                        <div class="x_title">
+                          <div class="col-md-8 col-sm-8">
+                            <div class="item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Pilih Leasing
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select name="id_provinsi" id="provasal" class="form-control" onChange="window.location.href=this.value">
+                                  <option selected disabled>Pilih Leasing</option>
+                                  <option value="/buka_blokir_leasing_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&leasing=Mandiri%20Auto%20Finance&plat=plat%20D&wilayah=Bandung%20Timur&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke MANDIRI AUTO FINANCE</option>
+                                  <option value="/buka_blokir_leasing_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&leasing=BCA&plat=plat%20D&wilayah=Bandung%20Pajajaran&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke BCA</option>
+                                  <option value="/buka_blokir_leasing_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&leasing=Bank%20Mandiri&plat=plat%20D&wilayah=Bandung%20Tengah&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke BANK MANDIRI</option>
+                                  <option value="/buka_blokir_leasing_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&leasing=BPR%20KS&plat=plat%20D&wilayah=Rancaekek&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke BPR KS</option>
+                                </select>
+                              </div>
+                              </div>
+                            </div><br>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <% include ../partials/footer %>
+        <!-- /footer content -->
+    </div>
+    </div>
+    <% include ../partials/script %>
+
+       
+  </body>
+
+  </html>

@@ -1,0 +1,107 @@
+<% include ../partials/head %>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <!-- menu profile quick info -->
+            <% include ../partials/head-sidebar %>
+              <!-- /menu profile quick info -->
+              <!-- sidebar menu -->
+              <% include ../partials/sidebar %>
+                <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <% include ../partials/navigation %>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <div class="">
+              <div class="page-title">
+                <!-- <div class="title_left">
+                  <h3><%= qs.pajak %> <%= qs.kendaraan %> <%= qs.provinsi %></h3>
+                </div> -->
+              </div>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                    <h2>PERPANJANGAN KIR <%= qs.jk.toUpperCase() %></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                    <div class="x_content">
+                      <br />
+                        <div class="x_title">
+                          <div class="col-md-6 col-sm-6">
+                            <div class="item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bandung & Cimahi
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select name="id_provinsi" id="provasal" class="form-control" onChange="window.location.href=this.value">
+                                  <option selected disabled>Pilih Kota</option>
+                                  <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&kota=Bandung%20%26%20Cimahi&plat=plat%20D&wilayah=Kota%20Bandung&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Kota Bandung</option>
+                                  <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&kota=Bandung%20%26%20Cimahi&plat=plat%20D&wilayah=Kab%2E%20Bandung&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Kab. Bandung</option>
+                                  <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&kota=Bandung%20%26%20Cimahi&plat=plat%20D&wilayah=Kab%2E%20Bandung%20Barat&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Kab. Bandung Barat</option>
+                                  <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&kota=Bandung%20%26%20Cimahi&plat=plat%20D&wilayah=Cimahi&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Cimahi</option>
+                                </select>
+                              </div>
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Non Bandung & Cimahi
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select class="select2_group form-control" onChange="window.location.href=this.value">
+                                  <optgroup label="BANTEN">
+                                    <option value=""selected disabled>Pilih Kota</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Lebak%2FRangkasbitung&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Kabupaten Lebak/Rangkasbitung</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Pandeglang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Pandeglang</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Kota%20Serang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Kota Serang</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Kab%2ESerang%2FRangkasbitung&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Kabupaten Serang /Rangkasbitung</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Kab%2ETanggerang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Kabupaten Tangerang</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20A&provinsi=Banten&kota=Kota Cilegon&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat A Kota Cilegon</option>
+                                  </optgroup>
+                                  <optgroup label="PLAT B NON DKI JAKARTA DAN DKI JAKARTA">
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Balaraja&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Balaraja</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Cikokol&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Cikokol</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Serpong&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Serpong</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Tangerang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Tangerang</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Cikarang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Cikarang</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Depok&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Depok</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Bekasi&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B Bekasi</option>
+                                    <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20B&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=DKI Jakarta&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat B DKI Jakarta</option>
+                                  </optgroup>
+                                  <optgroup label="JAWA TENGAH">
+                                      <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20G&provinsi=Jawa%20Tengah&kota=Kota%20Pekalongan&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat G Kota Pekalongan</option>
+                                      <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20G&provinsi=Jawa%20Tengah&kota=Kab%2EPekalongan&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat G Kabupaten Pekalongan</option>
+                                      <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20G&provinsi=Jawa%20Tengah&kota=Kab%2EBatang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat G Kabupaten Batang </option>
+                                      <option value="/perpanjangan_kir_form?nama=Perpanjangan%20KIR&plat=Plat%20G&provinsi=Jawa%20Tengah&kota=Kab%2EPemalang&jk=<%= qs.jk %>">Perpanjangan KIR <%= qs.jk %> Plat G Kabupaten Pemalang</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                            </div><br>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <% include ../partials/footer %>
+        <!-- /footer content -->
+    </div>
+    </div>
+    <% include ../partials/script %>
+
+       
+  </body>
+
+  </html>

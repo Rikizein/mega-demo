@@ -1,0 +1,307 @@
+<% include ./partials/head %>
+
+<body class="materialdesign">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Header top area start-->
+    <div class="wrapper-pro">
+       <% include ./partials/sidebar %>
+        <!-- Header top area start-->
+        <div class="content-inner-all">
+            <% include ./partials/header %>
+            <br>
+            <!-- Header top area end-->
+            <!-- Breadcome start-->
+            
+            <!-- Breadcome End-->
+            <!-- Mobile Menu start -->
+            <% include ./partials/mobile %>
+            <!-- Mobile Menu end -->
+            <!-- Breadcome start-->
+            <!-- <div class="breadcome-area mg-b-30 des-none">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list map-mg-t-40-gl shadow-reset">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcome-heading">
+                                            <form role="search" class="">
+												<input type="text" placeholder="Search..." class="form-control">
+												<a href=""><i class="fa fa-search"></i></a>
+											</form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">Dashboard</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Breadcome End-->
+            <div class="container-fluid">
+                <div class="col-lg-12">
+                    <div class="sparkline9-list shadow-reset">
+                        <div class="sparkline9-hd">
+                            <div class="main-sparkline9-hd">
+                                <h1>Input Pajak Tahunan</h1>
+                            </div>
+                        </div>
+                        <div class="sparkline9-graph">
+                            <div class="basic-login-form-ad">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="basic-login-inner">
+                                            <!-- <h3>Sign In</h3>
+                                            <p>Register User can get sign in from here</p> -->
+                                            <br>
+                                            <form action="/pajaktahunan" method="post">
+                                                <div class="form-group-inner">
+                                                    <div class="row" hidden>
+                                                        <div class="col-lg-2">
+                                                            <label class="login2">Tanggal</label>
+                                                        </div>
+                                                        <div class="col-lg-10">
+                                                            <input type="text" name="tanggal" class="form-control" value="<%= today %>" readonly/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-2">
+                                                            <label class="login2">No. Polisi</label>
+                                                        </div>
+                                                        <div class="col-lg-10">
+                                                            <input type="text" name="nopol" class="form-control" placeholder="A 123 ABC" required/>
+                                                            <small>*) Harap perhatikan spasi dan gunakan huruf KAPITAL</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-2">
+                                                            <label class="login2">Pengeluaran biaya hari ini</label>
+                                                        </div>
+                                                        <div class="col-lg-10 chosen-select-single mg-b-20">
+                                                            <select class="select2_demo_3 form-control" name="kategori_biaya" required>
+                                                                <option selected disabled></option>
+                                                                <option value="Biaya Pengurusan Pajak ke Petugas Samsat">Biaya Pengurusan Pajak ke Petugas Samsat</option>
+                                                                <option value="Biaya Tagihan NOTICE">Biaya Tagihan NOTICE</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-2">
+                                                            <label class="login2">Biaya</label>
+                                                        </div>
+                                                        <div class="col-lg-10">
+                                                            <input type="number" name="biaya" class="form-control" placeholder="Rp." required/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner" hidden>
+                                                    <div class="row">
+                                                        <div class="col-lg-2">
+                                                            <label class="login2">CU</label>
+                                                        </div>
+                                                        <div class="col-lg-10">
+                                                            <input type="text" name="created_user" class="form-control" value="<%= userData.username %>" required/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="login-btn-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-2"></div>
+                                                        <div class="col-lg-10">
+                                                            <div class="login-horizental">
+                                                                <button class="btn btn-sm btn-primary" type="submit">Simpan</button>
+                                                                <a href="/pajaktahunan">
+                                                                    <button class="btn btn-sm btn-danger" type="button">Batal</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Static Table Start -->
+            <div class="data-table-area mg-b-15">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sparkline13-list shadow-reset">
+                                <div class="sparkline13-hd">
+                                    <div class="main-sparkline13-hd">
+                                        <h1>Resume <span class="table-project-n">Data</span> Pajak Tahunan</h1>
+                                        <!-- <div class="sparkline13-outline-icon">
+                                            <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                                            <span><i class="fa fa-wrench"></i></span>
+                                            <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="sparkline13-graph">
+                                    <div class="datatable-dashv1-list custom-datatable-overright">
+                                        <!-- <div id="toolbar">
+                                            <select class="form-control">
+                                                <option value="">Export Basic</option>
+                                                <option value="all">Export All</option>
+                                                <option value="selected">Export Selected</option>
+                                            </select>
+                                        </div> -->
+                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="false" data-show-pagination-switch="true" data-show-refresh="false" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                            <thead>
+                                                <tr>
+                                                    <!-- <th data-field="state" data-checkbox="true"></th> -->
+                                                    <!-- <th data-field="id">ID</th> -->
+                                                    <th data-field="Tanggal" data-editable="false">Tanggal</th>
+                                                    <th data-field="No Polisi" data-editable="false">No Polisi</th>
+                                                    <th data-field="kategori_biaya" data-editable="false">Pengeluaran biaya hari ini</th>
+                                                    <th data-field="Biaya" data-editable="false">Biaya</th>
+                                                    <!-- <th data-field="action">Action</th> -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for(let i = 0; i < data.length; i++){ %>
+                                                <tr>
+                                                    <td><%= convertDate(data[i].tanggal) %></td>
+                                                    <td><%= data[i].nopol %></td>
+                                                    <td><%= data[i].kategori_biaya %></td>
+                                                    <td><%= data[i].biaya %></td>
+                                                </tr>
+                                                <%}%>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td>sfhshfjdfj</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Static Table End -->
+        </div>
+    </div>
+    <!-- Footer Start-->
+    <div class="footer-copyright-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright &#169; 2018 Colorlib All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+    <!-- Chat Box Start-->
+    <div class="chat-list-wrap">
+        <div class="chat-list-adminpro">
+            <div class="chat-button">
+                <span data-toggle="collapse" data-target="#chat" class="chat-icon-link"><i class="fa fa-comments"></i></span>
+            </div>
+            <div id="chat" class="collapse chat-box-wrap shadow-reset animated zoomInLeft">
+                <div class="chat-main-list">
+                    <div class="chat-heading">
+                        <h2>Messanger</h2>
+                    </div>
+                    <div class="chat-content chat-scrollbar">
+                        <div class="author-chat">
+                            <h3>Monica <span class="chat-date">10:15 am</span></h3>
+                            <p>Hi, what you are doing and where are you gay?</p>
+                        </div>
+                        <div class="client-chat">
+                            <h3>Mamun <span class="chat-date">10:10 am</span></h3>
+                            <p>Now working in graphic design with coding and you?</p>
+                        </div>
+                        <div class="author-chat">
+                            <h3>Monica <span class="chat-date">10:05 am</span></h3>
+                            <p>Practice in programming</p>
+                        </div>
+                        <div class="client-chat">
+                            <h3>Mamun <span class="chat-date">10:02 am</span></h3>
+                            <p>That's good man! carry on...</p>
+                        </div>
+                    </div>
+                    <div class="chat-send">
+                        <input type="text" placeholder="Type..." />
+                        <span><button type="submit">Send</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chat Box End-->
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- counterup JS
+		============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <!-- peity JS
+		============================================ -->
+    <script src="js/peity/jquery.peity.min.js"></script>
+    <script src="js/peity/peity-active.js"></script>
+    <!-- sparkline JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- data table JS
+		============================================ -->
+    <script src="js/data-table/bootstrap-table.js"></script>
+    <script src="js/data-table/tableExport.js"></script>
+    <script src="js/data-table/data-table-active.js"></script>
+    <script src="js/data-table/bootstrap-table-editable.js"></script>
+    <script src="js/data-table/bootstrap-editable.js"></script>
+    <script src="js/data-table/bootstrap-table-resizable.js"></script>
+    <script src="js/data-table/colResizable-1.5.source.js"></script>
+    <script src="js/data-table/bootstrap-table-export.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

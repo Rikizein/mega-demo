@@ -1,0 +1,109 @@
+<% include ../../partials/head %>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <!-- menu profile quick info -->
+            <% include ../../partials/head-sidebar %>
+              <!-- /menu profile quick info -->
+              <!-- sidebar menu -->
+              <% include ../../partials/sidebar %>
+                <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <% include ../../partials/navigation %>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <div class="">
+              <div class="page-title">
+                <!-- <div class="title_left">
+                  <h3><%= qs.pajak %> <%= qs.kendaraan %> <%= qs.provinsi %></h3>
+                </div> -->
+              </div>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                    <h2>PAJAK TAHUNAN ACC KTP <%= qs.jk.toUpperCase() %></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                    <div class="x_content">
+                      <br />
+                        <div class="x_title">
+                          <div class="col-md-6 col-sm-6">
+                            <div class="item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Jawa Barat
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select name="id_provinsi" id="provasal" class="form-control" onChange="window.location.href=this.value">
+                                  <option selected disabled>Pilih Kota</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Haurgeulis&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> E Haurgeulis</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Indramayu&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> E Indramayu</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Cirebon&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> E Cirebon</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Kuningan&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> E Kuningan</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Majalengka&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> E Majalengka</option>
+                                  <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Jawa%20Barat&kota=Bogor&jk=<%= qs.jk %>">Acc KTP Pajak Tahunan <%= qs.jk %> F Bogor</option>
+                                </select>
+                              </div>
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Kota Lain
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select class="select2_group form-control" onChange="window.location.href=this.value">
+                                  <optgroup label="BANTEN">
+                                    <option value=""selected disabled>Pilih Kota</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=LebakRangkasbitung&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Kabupaten Lebak/Rangkasbitung</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=Pandeglang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Pandeglang</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=Kota%20Serang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Kota Serang</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=Kab%2ESerang%2FRangkasbitung&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Kabupaten Serang /Rangkasbitung</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=Kab%2ETanggerang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Kabupaten Tangerang</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&opt=Acc%20KTP&provinsi=Banten&kota=Kota%20Cilegon&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat A Kota Cilegon</option>
+                                  </optgroup>
+                                  <optgroup label="PLAT B NON DKI JAKARTA DAN  DKI JAKARTA">
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Balaraja&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Balaraja</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Cikokol&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Cikokol</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Serpong&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Serpong</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Tangerang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Tangerang</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Cikarang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Cikarang</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Depok&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Depok</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=Bekasi&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B Bekasi</option>
+                                    <option value="/pt_accktp_form?pajak=Pajak%20Tahunan&provinsi=DKI%20Jakarta%20%26%20Non%20DKI%20Jakarta&kota=DKI Jakarta&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat B DKI Jakarta</option>
+                                  </optgroup>
+                                  <optgroup label="JAWA TENGAH">
+                                    <option value="/pt_lengkap_form?pajak=Pajak%20Tahunan&provinsi=Jawa%20Tengah&kota=Kota%20Pekalongan&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat G Kota Pekalongan</option>
+                                    <option value="/pt_lengkap_form?pajak=Pajak%20Tahunan&provinsi=Jawa%20Tengah&kota=Kab%2EPekalongan&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat G Kabupaten Pekalongan</option>
+                                    <option value="/pt_lengkap_form?pajak=Pajak%20Tahunan&provinsi=Jawa%20Tengah&kota=Kab%2EBatang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat G Kabupaten Batang </option>
+                                    <option value="/pt_lengkap_form?pajak=Pajak%20Tahunan&provinsi=Jawa%20Tengah&kota=Kab%2EPemalang&jk=<%= qs.jk %>">Acc KTP Pajak <%= qs.jk %> Plat G Kabupaten Pemalang</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                            </div><br>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <% include ../../partials/footer %>
+        <!-- /footer content -->
+    </div>
+    </div>
+    <% include ../../partials/script %>
+
+       
+  </body>
+
+  </html>

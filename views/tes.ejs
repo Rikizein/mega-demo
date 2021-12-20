@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form action="#" method="post" id="form-input">
+        <input type="text" id="nama" name="nama" required>
+        <input type="text" id="alamat" name="alamat" required>
+        <button type="submit">Simpan</button>
+    </form>
+    <br><br><br>
+    <table border="1" id="data-table">
+        <thead>
+            <tr>
+                <th>nama</th>
+                <th>alamat</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+<br><br><br>
+
+<div class="form-group">
+    <label>Provinsi Asal</label><br>
+    <select class="form-control" id="provasal" name="provasal">
+     <option>Pilih Provinsi Asal</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Kota Asal</label><br>
+    <select class="form-control" id="kota" name="kota">
+     <option>Pilih Kota Asal</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="provinsi">Provinsi Tujuan</label><br>
+    <select class="form-control" id="provinsi" name="provinsi"></select>
+  </div>
+      <div class="form-group">
+        <label for="kabupaten">Kota/Kabupaten Tujuan</label><br>
+        <select class="form-control" id="kabupaten" name="kabupaten"></select>
+      </div>
+
+      <script src="../vendors/jquery/dist/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#nama").focus()
+            save()
+            edit()
+            fetchData()
+            province()
+
+            $('#provasal').on('change', function(){
+            $.ajax({
+              type: "GET",
+              url:  "/city",
+              data: {province: $('#provasal').val()}
+            }).done(function(data){
+              let cityOptions = data.map(function(item){
+                return `<option value="${item.city_id}">${item.city_name}</option>`
+              })
+              $('#kota').html(cityOptions.join(''));
+            }).fail(function(err){
+              alert("error", err);
+            });
+          })
+        })
+
+            let idedit = ""
+            
+            function redirect() {
+                window.location.href = "http://localhost:3000/tes"
+            }
+            function save() {
+                $('#form-input').submit(function (e) {
+                e.preventDefault();
+                let nama = $("#nama").val()
+                let alamat = $("#alamat").val()
+
+                if (idedit !== "") {
+                    let nama = $("#nama").val()
+                    let alamat = $("#alamat").val()
+                    $.ajax({
+                        type: "PUT",
+                        url: '/edit/' + idedit,
+                        data:
+                        {
+                            nama: nama,
+                            alamat: alamat,
+                        }
+                    }).done(function (data) {
+                        idedit = "";
+                        fetchData()
+                        clear()
+                        $("#nama").focus()
+                    })
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: '/tes',
+                        data: {
+                            nama: nama,
+                            alamat: alamat,
+                        }
+                    }).done((data) => {
+                        idedit = "";
+                        fetchData()
+                        clear()
+                        $("#nama").focus()
+                    })
+                }
+            })
+            }
+            
+
+        function fetchData() {
+                // ajax() method to make api calls
+                $.ajax({
+                type: 'get',
+                url:'/testing',
+                }).done(function(response) {
+                let dataArr = response.data.tes;
+                console.log("arr", dataArr);
+                let html = '';
+                for(let i=0; i<dataArr.length; i++) {
+                    html += "<tr>"
+                    html += "<td>" + dataArr[i].nama + "</td>"
+                    html += "<td>" + dataArr[i].alamat + "</td>"
+                    html += "<td class='text-center'><button type='button' class='btn-edit' data-id='" + dataArr[i].id + "'>Edit</button> &nbsp"
+                    html += "<button class='btn btn-danger btn-delete' type='button' data-id='" + dataArr[i].id + "' onclick='return deleteItem()'>Delete</button></td>"
+                    html += "</tr>"
+
+                    $("#data-table tbody").html(html);
+                }
+               
+                })
+            }
+
+            function clear() {
+                $("#nama").val('')
+                $("#alamat").val('')
+            }
+
+            function edit() {
+                $('#data-table tbody').on('click', '.btn-edit', function () {
+                    // $("#table-cust").hide()
+                    $("#form-input").show()
+                    $.get('/testing/' + $(this).attr("data-id"), function (data) {
+                        console.log('data',data);
+                        $('#nama').val(data[0].nama);
+                        $('#alamat').val(data[0].alamat);
+                        idedit = data[0].id;
+                    })
+                })
+            }
+
+            function deleteItem() {
+                if (confirm("Are you sure?")) {
+                    remove()
+                }
+                return false;
+            }
+
+            function remove() {
+                $('#data-table tbody').on('click', '.btn-delete', function () {
+                    $.ajax({
+                        type: "delete",
+                        url: '/delete/' + $(this).attr("data-id")
+                    }).done(function (data) {
+                        fetchData()
+                    })
+                })
+            }
+
+            function province(){
+                $.ajax({
+                    type: "GET",
+                    url:  "/province"
+                }).done(function(data){
+                    console.log('dta',data);
+                    let provinceOptions = data.map(function(item){
+                    return `<option value="${item.province_id}">${item.province}</option>`
+                    })
+                    $('#provasal').html(provinceOptions.join(''));
+                    $('#provinsi').html(provinceOptions.join(''));
+                }).fail(function(err){
+                    alert("error", err);
+                });
+            }
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<% include ../partials/head %>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <!-- menu profile quick info -->
+            <% include ../partials/head-sidebar %>
+              <!-- /menu profile quick info -->
+              <!-- sidebar menu -->
+              <% include ../partials/sidebar %>
+                <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <% include ../partials/navigation %>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <div class="">
+              <div class="page-title">
+                <!-- <div class="title_left">
+                  <h3><%= qs.pajak %> <%= qs.kendaraan %> <%= qs.provinsi %></h3>
+                </div> -->
+              </div>
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                    <h2>PERMINTAAN SURAT KETERANGAN BUKA BLOKIR KE POLDA / POLRES</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                    <div class="x_content">
+                      <br />
+                        <div class="x_title">
+                          <div class="col-md-8 col-sm-8">
+                            <div class="item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Pilih Opsi
+                              </label>
+                              <div class="col-md-8 col-sm-8">
+                                <select name="id_provinsi" id="provasal" class="form-control" onChange="window.location.href=this.value">
+                                  <option selected disabled>Pilih Instalasi</option>
+                                  <option value="/buka_blokir_polda_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&inst=Polda&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke POLDA</option>
+                                  <option value="/buka_blokir_polda_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&inst=Polres%20Cimahi&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke  POLRES Cimahi</option>
+                                  <option value="/buka_blokir_polda_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&inst=Polres%20KKB&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke POLRES KBB</option>
+                                  <option value="/buka_blokir_polda_form?nama=Permintaan%20Surat%20Keterangan%20Buka%20Blokir&inst=Polres%20Kab%2E%20Bandung%28Soreang%29&jk=<%= qs.jk %>">Permintaan Surat Keterangan Buka Blokir ke  POLRES Kab. Bandung ( Soreang )</option>
+                                </select>
+                              </div>
+                              </div>
+                            </div><br>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <% include ../partials/footer %>
+        <!-- /footer content -->
+    </div>
+    </div>
+    <% include ../partials/script %>
+
+       
+  </body>
+
+  </html>
